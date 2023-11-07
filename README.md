@@ -1,6 +1,8 @@
 # DevSecOps Pipeline Demo
 
-NOTE: This demo is for my homelab and assumes Red Hat Advanced Cluster Security, OpenShift Pipelines, and OpenShift GitOps have been previously installed. For more information on this setup, review my [cluster-config](https://github.com/redhatryan/cluster-config) repo. This particular demo is a modified version of the [devsecops-demo]https://github.com/rcarrata/devsecops-demo.
+NOTE: This demo is for my homelab and assumes Red Hat Advanced Cluster Security, OpenShift Pipelines, and OpenShift GitOps have been previously installed. For more information on this setup, review my [cluster-config](https://github.com/redhatryan/cluster-config) repo. 
+
+This particular demo is a modified version of the [devsecops-demo]https://github.com/rcarrata/devsecops-demo.
 
 This DevSecOps CICD pipeline demo leverages several technologies such as:
 
@@ -234,7 +236,3 @@ NOTE: This pipeline will fail if you don't [disable the "Fixable at least Import
 # Troubleshooting
 
 - [Check the Tshoot section](docs/tshoot.md)
-
-# Credits
-
-Big thanks for the [contributors](https://github.com/rcarrata/devsecops-demo/graphs/contributors) and reviews that helped so much in this demo! We grow as we share!
