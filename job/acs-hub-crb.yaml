@@ -5,7 +5,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: default
-    namespace: acm-hub
+    namespace: acs-hub
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
