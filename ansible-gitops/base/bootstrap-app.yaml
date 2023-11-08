@@ -9,7 +9,7 @@ spec:
     server: https://api.acs.etbit.io:6443
   project: devsecops-bootstrap
   source:
-    path: ansible-bootstrap/job
+    path: job
     repoURL: https://github.com/redhatryan/acs-devsecops.git
     targetRevision: main
   syncPolicy:
