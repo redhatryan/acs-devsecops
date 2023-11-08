@@ -5,7 +5,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: acm-hub
+    namespace: openshift-gitops
     server: https://api.acs.etbit.io:6443
   project: devsecops-bootstrap
   source:
