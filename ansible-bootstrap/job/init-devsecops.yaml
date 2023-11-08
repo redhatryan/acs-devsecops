@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: init-devsecops
-  namespace: stackrox
+  namespace: acs-hub
 spec:
   template:
     spec:
