@@ -1,0 +1,25 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: devsecops-policy-generator
+policyDefaults:
+  namespace: openshift-gitops
+  remediationAction: enforce
+placementBindingDefaults:
+  name: "binding-policy-devsecops"
+policies:
+  - name: policy-bootstrap-devsecops-gitops
+    manifests:
+      - path: base
+  - name: policy-bootstrap-devsecops-job
+    manifests:
+      - path: job
+policySets:
+  - name: "devsecops-bootstrap"
+    description: "Policy for bootstrapping DevSecOps"
+    policies:
+      - policy-bootstrap-devsecops-gitops
+      - policy-bootstrap-devsecops-job
+    generatePolicySetPlacement: false
+    placement:
+      name: placement-policy-devsecops

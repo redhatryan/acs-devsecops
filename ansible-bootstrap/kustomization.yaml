@@ -1,5 +1,7 @@
-commonAnnotations:
-  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+namespace: openshift-gitops
 
 resources:
-  - init-ansible.yaml
+- devsecops-placement.yaml
+
+generators:
+- devsecops-policy-generator-config.yaml
