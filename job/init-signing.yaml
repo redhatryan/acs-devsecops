@@ -1,0 +1,52 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: init-devsecops
+  namespace: acs-hub
+spec:
+  template:
+    spec:
+      containers:
+        - image: registry.redhat.io/ansible-automation-platform/ee-minimal-rhel8:2.12.10-32
+          command:
+            - /bin/bash
+            - -c
+            - |
+              #!/usr/bin/env bash
+
+              echo "Setup temporary OCP user to make ansible happy"
+
+              echo "tempuser:x:$(id -u):$(id -g):,,,:${HOME}:/bin/bash" >> /etc/passwd
+              echo "tempuser:x:$(id -G | cut -d' ' -f 2)" >> /etc/group
+              id
+
+              # Install community kubernetes
+              ansible-galaxy collection install community.kubernetes
+
+              pip3 install kubernetes
+              pip3 install openshift
+
+              # Install some extra Python dependency:
+
+              pip3 install jmespath
+
+              #Add OC binary
+              curl -O https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.13.8/openshift-client-linux-4.13.8.tar.gz
+
+              tar xvf openshift-client-linux-4.13.8.tar.gz
+
+              mv oc /usr/local/bin
+
+              git clone https://github.com/redhatryan/acs-devsecops
+
+              cd acs-devsecops
+
+              info "Installing Signing"
+              ansible-playbook bootstrap/signing.yaml -v
+
+          name: init-devsecops
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      terminationGracePeriodSeconds: 30
+      serviceAccount: default
+      serviceAccountName: default

@@ -2,4 +2,5 @@ commonAnnotations:
   argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 
 resources:
-  - init-devsecops.yaml
+  - init-demo.yaml
+  - init-signing.yaml
