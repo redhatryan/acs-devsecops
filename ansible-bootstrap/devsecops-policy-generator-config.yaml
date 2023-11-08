@@ -8,9 +8,9 @@ policyDefaults:
 placementBindingDefaults:
   name: "binding-policy-devsecops"
 policies:
-  - name: policy-bootstrap-devsecops-job
+  - name: policy-bootstrap-devsecops
     manifests:
-      - path: job
+      - path: base
 policySets:
   - name: "devsecops-bootstrap"
     description: "Policy for bootstrapping DevSecOps"
