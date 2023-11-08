@@ -35,7 +35,7 @@ spec:
 
               tar xvf openshift-client-linux-4.13.8.tar.gz
 
-              mv openshift-client-linux-4.13.8/oc /usr/local/bin
+              mv oc /usr/local/bin
 
               git clone https://github.com/redhatryan/acs-devsecops
 
