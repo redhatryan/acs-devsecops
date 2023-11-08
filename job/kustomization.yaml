@@ -3,4 +3,3 @@ commonAnnotations:
 
 resources:
   - init-devsecops.yaml
-  - acs-hub-crb.yaml
