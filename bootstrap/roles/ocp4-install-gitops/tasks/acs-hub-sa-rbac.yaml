@@ -1,0 +1,4 @@
+- name: Add ClusterRoleBinding to the acm-hub/default SA
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', 'acm-hub-rb.yml.j2') }}"
