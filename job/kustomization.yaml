@@ -3,4 +3,4 @@ commonAnnotations:
 
 resources:
   - init-demo.yaml
-  - init-signing.yaml
+ # - init-signing.yaml
