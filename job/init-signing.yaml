@@ -42,7 +42,7 @@ spec:
               cd acs-devsecops
 
               info "Installing Signing"
-              ansible-playbook bootstrap/signing.yaml -v
+              ansible-playbook bootstrap/deploy_signing.yaml -v
 
           name: init-devsecops
       dnsPolicy: ClusterFirst
