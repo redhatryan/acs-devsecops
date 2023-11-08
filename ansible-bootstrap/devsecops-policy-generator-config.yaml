@@ -8,9 +8,6 @@ policyDefaults:
 placementBindingDefaults:
   name: "binding-policy-devsecops"
 policies:
-  - name: policy-bootstrap-devsecops-gitops
-    manifests:
-      - path: base
   - name: policy-bootstrap-devsecops-job
     manifests:
       - path: job
@@ -19,7 +16,6 @@ policySets:
     description: "Policy for bootstrapping DevSecOps"
     policies:
       - policy-bootstrap-devsecops-gitops
-      - policy-bootstrap-devsecops-job
     generatePolicySetPlacement: false
     placement:
       name: placement-policy-devsecops
