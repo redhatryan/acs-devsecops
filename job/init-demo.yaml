@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: init-devsecops
+  name: init-demo
   namespace: acs-hub
 spec:
   template:
