@@ -15,7 +15,7 @@ policySets:
   - name: "devsecops-bootstrap"
     description: "Policy for bootstrapping DevSecOps"
     policies:
-      - policy-bootstrap-devsecops-gitops
+      - policy-bootstrap-devsecops
     generatePolicySetPlacement: false
     placement:
       name: placement-policy-devsecops
