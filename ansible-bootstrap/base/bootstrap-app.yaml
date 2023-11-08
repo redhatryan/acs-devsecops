@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: openshift-gitops
     server: https://api.acs.etbit.io:6443
-  project: bootstrap
+  project: devsecops-bootstrap
   source:
     path: ansible-bootstrap/job
     repoURL: https://github.com/redhatryan/acs-devsecops.git
