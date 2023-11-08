@@ -27,4 +27,4 @@ placementRef:
 subjects:
 - apiGroup: policy.open-cluster-management.io
   kind: PolicySet
-  name: acs-bootstrap
+  name: devsecops-bootstrap
