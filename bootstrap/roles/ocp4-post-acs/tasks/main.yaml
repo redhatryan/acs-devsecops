@@ -1,3 +1,4 @@
+stackrox_central_admin_password: Ai86LUstECD76WaJWoEg07dfW
 
 - import_tasks: post_ci.yaml
 #- import_tasks: policies.yaml
