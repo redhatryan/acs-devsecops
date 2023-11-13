@@ -6,8 +6,9 @@ metadata:
 spec:
   destination:
     namespace: openshift-gitops
-    server: https://api.acs.etbit.io:6443
-  project: devsecops-job-bootstrap
+    server: https://kubernetes.default.svc
+    #server: https://api.acs.etbit.io:6443
+  project: cluster-config
   source:
     path: job
     repoURL: https://github.com/redhatryan/acs-devsecops.git
