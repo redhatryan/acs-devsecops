@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: init-signing
-  namespace: acs-hub
+  namespace: stackrox
 spec:
   template:
     spec:
