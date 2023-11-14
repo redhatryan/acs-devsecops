@@ -3,7 +3,7 @@
 set -e -u -o pipefail
 declare -r SCRIPT_DIR=$(cd -P $(dirname $0) && pwd)
 declare PRJ_PREFIX="demo"
-declare COMMAND="help"
+declare COMMAND="start"
 
 valid_command() {
   local fn=$1; shift
