@@ -20,7 +20,7 @@
                     "name": "",
                     "deployment": null,
                     "image": {
-                        "name": "image-registry.openshift-image-registry.svc:5000/ocp-workshop/spring-petclinic"
+                        "name": "image-registry.openshift-image-registry.svc:5000/cicd/spring-petclinic"
                     },
                     "expiration": null
                 }
@@ -31,7 +31,7 @@
                 "FAIL_BUILD_ENFORCEMENT"
             ],
             "notifiers": [],
-            "lastUpdated": "2023-11-15T03:15:01.767548813Z",
+            "lastUpdated": "2023-11-15T04:15:15.937085718Z",
             "SORTName": "",
             "SORTLifecycleStage": "",
             "SORTEnforcement": false,
