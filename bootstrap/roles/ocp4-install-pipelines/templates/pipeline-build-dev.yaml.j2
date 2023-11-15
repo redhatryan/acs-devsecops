@@ -214,14 +214,6 @@ spec:
     workspaces:
     - name: workspace
       workspace: workspace
-  - name: wait-application
-    taskRef:
-      name: argocd-task-sync-and-wait
-    runAfter:
-      - update-deployment
-    params:
-      - name: application-name
-        value: dev-spring-petclinic
   - name: perf-tests-clone
     taskRef:
       name: git-clone
@@ -230,7 +222,7 @@ spec:
     - name: output
       workspace: workspace
     runAfter:
-      - wait-application
+      - update-deployment
     params:
     - name: url
       value: $(params.APP_TESTS_GIT)
